@@ -15,7 +15,7 @@
 ### Local Setup Web Server
 
 ``` bash
-git clone https://github.com/thekarananand/attendance_system.git
+git clone https://github.com/thenandhini/attendance_system.git
 
 cd ./attendance_system
 
