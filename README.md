@@ -15,9 +15,9 @@
 ### Local Setup Web Server
 
 ``` bash
-git clone https://github.com/thekarananand/taskcontrol.git
+git clone https://github.com/thekarananand/attendance_system.git
 
-cd ./taskcontrol
+cd ./attendance_system
 
 python3 manage.py makemigration
 python3 manage.py migrate
