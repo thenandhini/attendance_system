@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Testing</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <main class="w-full h-full flex aic jcc">
+            <section id="login" class="flex-v w-fc h-fc gap-20px" data-hidden="false">
+                <h1>Login Page</h1>
+                <form action="{% url 'index' %}" method="POST" class="flex-v gap-20px">
+                    {% csrf_token %}
+                    <div class="flex-v gap-5px">
+                        <label for="rollno">Roll Number</label>
+                        <input type="text" id="rollno" name="rollno">
+                    </div>
+                    <div class="flex-v gap-5px">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <input type="hidden" id="ip" name="ip" value="xx.xx.xx.xx">
+                    <button>Mark Attendance</button>
+                </form>
+            </section>
+        </main>
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>

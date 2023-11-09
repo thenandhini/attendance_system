@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+
+    --background: hsl(0, 15%, 11%);
+    --foreground: hsl(0, 15%, 16%);
+    --foreground-2: hsl(0, 15%, 21%);
+
+    --a_1: #FCF5ED;
+    --a_2: #F4BF96;
+    --a_3: #dd7682;
+
+    --a_1_foreground: #FCF5ED33;
+    --a_2_foreground: #F4BF9633;
+    --a_3_foreground: #DD768233;
+
+    --text-color: white;
+    --tab-color: #1F1717;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    height: 100dvh;
+    width: 100vw;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MasterContainer {
+    position: relative;
+    min-height: calc(100dvh - 8rem);
+    width: min(120ch, calc(100vw - 8rem));
+    margin-bottom: calc(8px + 0.65rem + 0.5ch);
+}
+
+ul { list-style-type: none; }
+
+nav > ul {
+    display: flex;
+    gap: 1ch;
+}
+
+nav > ul > li {
+    width: 18ch;
+    border-radius: 10px;
+}
+
+nav > ul > li > a {
+    color: var(--tab-color);
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    padding: 8px 12px;
+}
+
+nav > ul > li:nth-of-type(1){
+    background-color: var(--a_1);
+}
+nav > ul > li:nth-of-type(2){
+    background-color: var(--a_2);
+}
+nav > ul > li:nth-of-type(3){
+    background-color: var(--a_3);
+}
+
+main {
+    height: calc( 100% - (2 * (8px + 1.3rem)));
+}
+
+main section {
+    position: absolute;
+    height: calc(100% - 2 * (8px) - 1.3rem);
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Section1 {
+    background-color: var(--a_1);
+}
+
+#Section1[data-on-top="true"] {
+    border-top-left-radius: 0px;
+}
+
+#Section2 {
+    background-color: var(--a_2);
+}
+
+#Section3 {
+    background-color: var(--a_3);
+}
+
+main section[data-on-top="false"] {
+    z-index: 20;
+}
+
+main section[data-on-top="true"] {
+    z-index: 100;
+}
+
+nav li {
+    margin-bottom: 1ch;
+    transition: 40ms ease-in;
+}
+
+nav li[data-section-selected="true"] {
+    
+    margin-bottom: 0ch;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+main section * {
+    color: var(--text-color);
+}
+
+main section .data {
+    box-sizing: border-box;
+    background: var(--foreground);
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.data h2{
+    font-size: 1.5rem;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--text-color);
+}
+
+#Section1 ul {
+    margin-block: 2ch;
+    display: flex;
+    flex-direction: column;
+    gap: 1ch;
+
+
+}
+
+#Section1 ul li {
+    box-sizing: border-box;
+    padding: 1ch;
+    padding-left: 1.5ch;
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid var(--a_1);
+    border-radius: 1.6ch;
+}
+
+#Section1 ul li .time > * {
+    border: 2px solid var(--a_1);
+    padding: 1ch;
+    border-radius: 1ch;
+    background-color: var(--background);
+}
+
+#Section1 ul li .time button:hover {
+    background-color: var(--foreground);
+}
+
+#Section1 ul li .time {
+    display: flex;
+    gap: 1ch
+}
+
+#Section2 .ProjectContainer {
+    margin-block: 2ch;
+    display: flex;
+    gap: 1ch;
+    height: calc(100% - 4ch - 1.5rem);
+}
+
+#Section2 .ProjectContainer > *{
+    box-sizing: border-box;
+    width: calc( (100% - 2ch) / 3);
+    border: 1px solid var(--a_2);
+    padding: 1ch;
+    height: 100%;
+    border-radius: 1ch;
+    background-color: var(--background);
+}
+
+
+/*
+#Section2 .ProjectContainer article ul{
+    margin-block: 1ch;
+    display: flex;
+    flex-direction: column;
+    gap: 1ch;
+}
+
+#Section2 .ProjectContainer article li{
+    box-sizing: border-box;
+    border: 1px solid var(--a_2);
+    border-radius: 1ch;
+    padding: 1ch;
+}
+
+#Section2 .ProjectContainer article:nth-of-type(1) li {background-color: var(--a_1_foreground);}
+#Section2 .ProjectContainer article:nth-of-type(2) li {background-color: var(--a_2_foreground);}
+#Section2 .ProjectContainer article:nth-of-type(3) li {background-color: var(--a_3_foreground);} */
