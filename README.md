@@ -1,6 +1,7 @@
-# TaskControl
-
-![Screenshot of TaskControl App](media_files/ScreenShot.png)
+# Attendance System
+<div align="center">
+    <img src="screenshot.png" alt="" width="50%">
+</div>
 
 ### Dependencies 
 
