@@ -19,7 +19,7 @@ git clone https://github.com/thenandhini/attendance_system.git
 
 cd ./attendance_system
 
-python3 manage.py makemigration
+python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
