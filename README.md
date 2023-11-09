@@ -8,6 +8,10 @@
 - Python3
 - Django (pip-module)
 
+    ``` bash
+    python3-pip install django
+    ```
+
 ### Local Setup Web Server
 
 ``` bash
@@ -17,7 +21,6 @@ cd ./taskcontrol
 
 python3 manage.py makemigration
 python3 manage.py migrate
-
 ```
 
 ### Run Web Server
