@@ -74,9 +74,8 @@ form > div > input {
 button {
     padding: 10px;
     background-color: var(--inactive-accent);
-    border: none ;
+    border: 1px solid black;
     border-radius: 6px;
-    color: white;
 }
 
 button:hover {
