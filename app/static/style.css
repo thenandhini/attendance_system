@@ -76,6 +76,7 @@ button {
     background-color: var(--inactive-accent);
     border: none ;
     border-radius: 6px;
+    color: white;
 }
 
 button:hover {
