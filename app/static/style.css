@@ -9,9 +9,9 @@
     --inactive-selection: hsl(0, 0%, 40%); 
     --active-selection: hsl(0, 0%, 0%);
 
-    --inactive-accent: hsl(216, 100%, 70%);
-    --hover-accent: hsl(216, 100%, 73%);
-    --active-accent: hsl(216, 100%, 60%);
+    --inactive-accent: hsl(216, 100%, 80%);
+    --hover-accent: hsl(216, 100%, 77%);
+    --active-accent: hsl(216, 100%, 70%);
 }
 
 * {
@@ -43,6 +43,8 @@ section {
     border-radius: 7px;
     background-color: white;
     box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+    min-width: min(30ch, 70vw);
+    max-width: min(30ch, 70vw);
 }
 
 form > div {
@@ -68,14 +70,15 @@ form > div > input {
     border-radius: 6px;
     padding: 10px;
     border: 1px solid var(--inactive-selection);
-    min-width: min(30ch, 70vw);
+
 }
 
 button {
     padding: 10px;
     background-color: var(--inactive-accent);
-    border: 1px solid black;
+    border: 1px solid var(--inactive-selection);
     border-radius: 6px;
+    font-weight: 700;
 }
 
 button:hover {
@@ -91,7 +94,28 @@ button:focus {
     display: none;
 }
 
-section > img {
+.msg > img{
     height: 1.8rem;
     width: 1.8rem;
+    transform: translateX(-5%);
+}
+
+.msg > p{
+    font-weight: 400;
+}
+
+#bad {
+    border-color: #cc0000ff;
+}
+
+#bad p {
+    color: #cc0000ff;
+}
+
+/* #good {
+    border-color: #0056cdff;
+} */
+
+#good p {
+    color: #0056cdff;
 }

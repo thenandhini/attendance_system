@@ -10,9 +10,9 @@
     </head>
     <body>
         <main class="w-full h-full flex aic jcc">
-            <section class="flex aic w-fc h-fc gap-10px">
+            <section class="msg flex-v w-fc h-fc gap-10px" id="{{ status }}">
                 <img src="{% static icon %}">
-                {{ status | safe }}
+                <p>{{ msg }}</p>
             </section>
         </main>
     </body>
