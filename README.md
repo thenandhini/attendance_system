@@ -1,6 +1,6 @@
 # Attendance System
 <div align="center">
-<img src="https://raw.githubusercontent.com/thenandhini/attendance_system/main/screenshot.png" alt="hello" width="100%">
+<img src="https://raw.githubusercontent.com/thenandhini/attendance_system/main/ScreenShot.png" alt="hello" width="100%">
 </div>
 
 ### Dependencies 
