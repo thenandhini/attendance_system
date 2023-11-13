@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from . import utils
 
 # Create your views here.
 
@@ -14,30 +15,40 @@ def index(request):
 
         print("+-------------------------------------+")
         print("+-------------------------------------+")
-        print(rollno)
-        print(password)
-        print(ip)
-        print(Hid)
+        print("Roll No          :"+str(rollno))
+        print("Password         :"+str(password))
+        print("IP               :"+str(ip))
+        print("Hardware ID      :"+str(Hid))
         print("+-------------------------------------+")
         print("+-------------------------------------+")
+
+        if utils.ip_match(ip):
+
+            if not utils.proxy(rollno, Hid):
+                
+                if utils.mark_attendance(rollno, password):
+                
+                    return render(request, "status.html", {
+                        "status" : 'good',
+                        "icon" : 'icon_good.svg',
+                        "msg" : """Your Attendance is Marked Successfully!"""
+                    })
+            
+        else:
+
+            return render(request, "status.html", {
+                "status" : 'bad',
+                "icon" : 'icon_wifi_error.svg',
+                "msg" : """Please Connect to Hostel Wifi"""
+            })
+        
+
 
         return render(request, "status.html", {
-            "status" : 'good',
-            "icon" : 'icon_good.svg',
-            "msg" : """Your Attendance is Marked Successfully!"""
+                "status" : 'bad',
+                "icon" : 'icon_error.svg',
+                "msg" : """Invalid Attempt for Marking Attendance!"""
         })
-
-        # return render(request, "status.html", {
-        #     "status" : 'bad',
-        #     "icon" : 'icon_error.svg',
-        #     "msg" : """Invalid Attempt for Marking Attendance!"""
-        # })
-
-        # return render(request, "status.html", {
-        #     "status" : 'bad',
-        #     "icon" : 'icon_wifi_error.svg',
-        #     "msg" : """Please Connect to Hostel Wifi"""
-        # })
 
 
         
